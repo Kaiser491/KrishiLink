@@ -1,19 +1,42 @@
 /* ================================
-   KrishiLink - Base Script
-   Version: 1.0
+   KrishiLink - Enhanced Script
+   Phase 2
    ================================ */
 
-// Ensure script runs after page loads
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("KrishiLink loaded successfully 🌾");
+    console.log("KrishiLink Phase 2 JS loaded 🌾");
 
-    // Navigation click feedback (simple, clean)
+    /* -------- Active Navigation Highlight -------- */
     const navLinks = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop();
 
     navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            alert("This section will be available soon 🌱");
+        if (link.getAttribute("href") === currentPage || 
+            (currentPage === "" && link.getAttribute("href") === "index.html")) {
+            link.style.borderBottom = "2px solid #ffffff";
+        }
+    });
+
+    /* -------- Button Click Feedback (Hero Buttons) -------- */
+    const buttons = document.querySelectorAll(".btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            console.log(`Navigating to: ${btn.getAttribute("href")}`);
+        });
+    });
+
+    /* -------- Feature Card Hover Log (optional dev aid) -------- */
+    const featureCards = document.querySelectorAll(".feature-card");
+
+    featureCards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 8px 18px rgba(0,0,0,0.12)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 4px 12px rgba(0,0,0,0.08)";
         });
     });
 
