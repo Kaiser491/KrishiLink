@@ -1,0 +1,94 @@
+/* ================================
+   KrishiLink - Base Styles
+   Version: 1.0
+   ================================ */
+
+/* -------- CSS Reset -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------- Body -------- */
+body {
+  background-color: #f4f7f3;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* -------- Header -------- */
+header {
+  background-color: #2f6f3e;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* -------- Navigation -------- */
+nav {
+  background-color: #245a32;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Main Content -------- */
+main {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #2f6f3e;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1rem;
+}
+
+/* -------- Footer -------- */
+footer {
+  background-color: #2f6f3e;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
